@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>From my Heart</title>
+    <link rel="stylesheet" href="msg1.css">
+    <!-- <script src="control.js" defer></script>  -->
+</head>
+<body>
+     
+    <div class="heading">
+    <h2>❤️Thank you❤️</h2>
+    <p>I hope you will click yes!!</p>
+    <audio src="./Asset/kal ho na ho bgm.mp3" autoplay loop></audio>
+    <p>The images below are from my heart for you!! With three language [English, Tamil , Hindi]</p>
+    <p>I hope you will understand anyone🥰</p>
+    </div>
+   <section class="hero"> 
+    <div class="gallary";>
+        <img src="./Asset/img3.jpeg" alt="image3" id="img1" style="border: 2px solid black;">
+        <img src="./Asset/img2.jpeg" alt="image2" id="img2" style="border: 2px solid black; ">
+        <img  src="./Asset/img1.jpeg" alt="image1" id="img3" style="border: 2px solid black;">
+    </div>
+    <div class="msg">
+    <h3>Finally MY  time has came, after long wait Saying this to you!!</h3>
+    <p>I LOVE YOU SO soo MUCH!!! ANISHA</p>
+    <H2>Will you be part of my life💗?</H2>
+       <button id="nobtn">NO🥺</button>
+    <button class="btn-yes" id="yesbtn" onclick="sayyes(this)">YES❤️</button>
+    </div>
+    
+  <img src="./Asset/cat.gif" id="loveGif" alt="Love GIF">
+   <script>
+const nobtn = document.getElementById("nobtn");
+// No button moves away
+nobtn.addEventListener("mouseover", () => {
+  nobtn.style.position = "absolute";
+
+  const btnWidth = nobtn.offsetWidth;
+  const btnHeight = nobtn.offsetHeight;
+
+  const maxX = window.innerWidth - btnWidth;
+  const maxY = window.innerHeight - btnHeight;
+
+  const randomX = Math.random() * maxX;
+  const randomY = Math.random() * maxY;
+
+  nobtn.style.left = randomX + "px";
+  nobtn.style.top = randomY + "px";
+});
+function sayyes(button) {
+    button.style.backgroundColor = "#ff4d6d";
+    button.style.color = "white";
+    button.textContent = "YES❤️";
+
+
+    // Show the GIF
+    document.getElementById("loveGif").style.display = "block";
+
+    // Optional alert
+    alert("Alhamdulillah! I know you love me too Anisha❤️🥰😘");
+    // Redirect after 3 seconds
+    setTimeout(() => {
+        window.location.href = "./message.html";
+    }, 3000);
+    
+}
+yesbtn.addEventListener("mouseover", () => {
+  nobtn.style.position = "static";
+  nobtn.style.left = "";
+  nobtn.style.top = "";
+});
+
+</script>
+
+ </section>
+</body>
+</html>
