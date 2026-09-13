@@ -100,3 +100,20 @@ img{
     width: 350px;
     z-index: 9999;
 }
+@media (min-width: 320px) and (max-width: 768px){
+    .msg{
+        width: 95%;
+    }
+    #img2{
+        padding: 55px 0px;
+    }
+    #img3{
+        padding: 73px 0px;
+    }
+    #img1{
+        padding: 65px 0px;
+    }
+    #loveGif{
+        width: 300px;
+    }
+}
